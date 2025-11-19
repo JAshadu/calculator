@@ -18,7 +18,10 @@ const touchButton = (e) => {
     }
     else if(e.target.value === "π") {
         if(output.value === '') {
-            output.value = pi * 1
+            output.value = pi
+        }
+        else if(output.value.includes("+") || output.value.includes("-") || output.value.includes("×") || output.value.includes("÷")) {
+            output.value = output.value + pi
         }
         else{
             output.value *= pi
